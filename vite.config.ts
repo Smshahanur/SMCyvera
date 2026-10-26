@@ -5,6 +5,12 @@ import fs from 'fs';
 import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
+  const rootDir = import.meta.dirname;
+  const htmlFiles = fs.readdirSync(rootDir).filter(file => file.endsWith('.html'));
+  const input = Object.fromEntries(
+    htmlFiles.map(file => [file.replace(/\.html$/, ''), path.resolve(rootDir, file)])
+  );
+
   return {
     plugins: [
       react(),
@@ -14,7 +20,7 @@ export default defineConfig(() => {
         configureServer(server) {
           server.middlewares.use((req, res, next) => {
             if (req.url === '/SMCyvera-updated.zip') {
-              const zipPath = path.resolve(__dirname, 'public/SMCyvera-updated.zip');
+              const zipPath = path.resolve(rootDir, 'public/SMCyvera-updated.zip');
               if (fs.existsSync(zipPath)) {
                 res.setHeader('Content-Type', 'application/zip');
                 res.setHeader('Content-Disposition', 'attachment; filename="SMCyvera-updated.zip"');
@@ -27,9 +33,14 @@ export default defineConfig(() => {
         },
       },
     ],
+    build: {
+      rollupOptions: {
+        input,
+      },
+    },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, '.'),
+        '@': path.resolve(rootDir, '.'),
       },
     },
     server: {
