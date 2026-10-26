@@ -1,0 +1,6 @@
+{
+  "name": "SMCyvera by Shahanur Mollah",
+  "description": "Practical technology guides, troubleshooting explainers, and browser-based calculators by Shahanur Mollah.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
