@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Android Troubleshooting Center | SMCyvera by Shahanur Mollah</title>
+  <meta name="description" content="Interactive Android troubleshooting center by Shahanur Mollah. Step-by-step diagnostic engine covering 60 battery, Wi-Fi, app, storage, and hardware issues with Samsung, Pixel, and Xiaomi OEM guidance.">
+  <link rel="canonical" href="https://smcyvera.vercel.app/android-troubleshooting.html">
+  <link rel="stylesheet" href="/style.css">
+
+  <!-- OpenGraph Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SMCyvera by Shahanur Mollah">
+  <meta property="og:title" content="Android Troubleshooting Center | SMCyvera by Shahanur Mollah">
+  <meta property="og:description" content="Interactive Android troubleshooting center with step-by-step diagnosis for 60 common phone problems, OEM notes, and browser fix history.">
+  <meta property="og:url" content="https://smcyvera.vercel.app/android-troubleshooting.html">
+  <meta property="og:image" content="https://smcyvera.vercel.app/author.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Android Troubleshooting Center | SMCyvera by Shahanur Mollah">
+  <meta name="twitter:description" content="Interactive Android troubleshooting engine covering 60 common problems with OEM guidance and step-by-step tests.">
+  <meta name="twitter:image" content="https://smcyvera.vercel.app/author.jpg">
+
+  <!-- Verification & Monetization -->
+  <meta name="google-site-verification" content="ci49ZoPsQaIdKucUGiJXXPcg7_97_5wrK8ISnPa_WQw" />
+  <meta name="google-adsense-account" content="ca-pub-6725270907667054">
+
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Android Troubleshooting Center | SMCyvera by Shahanur Mollah",
+    "description": "Comprehensive interactive diagnostic center covering 60 Android problems across battery, networking, storage, apps, and hardware.",
+    "url": "https://smcyvera.vercel.app/android-troubleshooting.html",
+    "author": {
+      "@type": "Person",
+      "name": "Shahanur Mollah",
+      "jobTitle": "Web Developer & Technology Specialist"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SMCyvera by Shahanur Mollah",
+      "url": "https://smcyvera.vercel.app/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="container nav">
+      <a class="logo" href="/index.html" aria-label="SMCyvera by Shahanur Mollah home">
+        <span class="logo-mark">SM</span>
+        <div class="logo-text-group">
+          <span class="logo-brand">Cyvera</span>
+          <span class="logo-author">by Shahanur Mollah</span>
+        </div>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open menu">☰</button>
+      <nav id="main-nav" aria-label="Main navigation">
+        <a href="/index.html">Home</a>
+        <a href="/guides.html">Guides</a>
+        <a href="/android-troubleshooting.html" aria-current="page">Android Center</a>
+        <a href="/tools.html">Tools</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">SMCyvera Interactive Diagnostics · Android 10 – 15+</div>
+          <h1>Android Troubleshooting Center</h1>
+          <p>A comprehensive, interactive diagnostic engine for 60 common Android problems across battery, Wi-Fi, storage, apps, audio, and hardware. Guided tests, OEM-specific settings for Samsung, Pixel, and Xiaomi, and local fix history.</p>
+          
+          <div class="hero-actions">
+            <a class="btn" href="#diagnostic-hub">Find Your Problem Below</a>
+            <button class="btn secondary" id="viewHistoryBtn" type="button">
+              View Fix History <span id="historyBadge" class="badge-count" hidden>0</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <h2>How Diagnosis Works</h2>
+          <p>Every problem is diagnosed with clear engineering reasoning rather than random trial-and-error:</p>
+          <div class="hero-points">
+            <div class="hero-point"><b>01</b><span><b>Targeted check</b> — pinpoint whether the root cause is software, setting, or hardware.</span></div>
+            <div class="hero-point"><b>02</b><span><b>OEM variations</b> — specific navigation paths for Samsung One UI, Pixel, and Xiaomi.</span></div>
+            <div class="hero-point"><b>03</b><span><b>Fix History</b> — automatically saves your steps and outcomes in browser storage.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Browser Sandbox Safety Disclaimer -->
+    <section class="sandbox-disclaimer-section">
+      <div class="container">
+        <div class="sandbox-disclaimer-card">
+          <div class="disclaimer-badge">🔒 100% Private &amp; Browser-Based</div>
+          <div class="disclaimer-content">
+            <p><strong>Sandbox Notice:</strong> This diagnostic tool runs purely on client-side logic in your browser. It does not scan, modify, or read your phone's private files, logs, or personal photos. Every test is a step-by-step walkthrough for you to safely test on your device.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Troubleshooting Engine & Problem Hub -->
+    <section class="section" id="diagnostic-hub">
+      <div class="container">
+        
+        <!-- Search and Device Controls -->
+        <div class="troubleshoot-controls-card">
+          <div class="search-field-wrap">
+            <label for="troubleshootSearch" class="visually-hidden">Search 60 Android problems</label>
+            <input 
+              id="troubleshootSearch" 
+              class="troubleshoot-search-input" 
+              type="search" 
+              placeholder="Search problems (e.g., 'Phone won't charge', 'Mobile data', 'Delayed notifications', 'Touchscreen')..." 
+              autocomplete="off"
+            >
+            <button id="clearSearch" type="button" class="clear-search-btn" hidden aria-label="Clear search">✕</button>
+          </div>
+
+          <div class="controls-row">
+            <div class="oem-selector-wrap">
+              <label for="oemSelector" class="control-label">Your Device Brand:</label>
+              <select id="oemSelector" class="oem-select">
+                <option value="all">All Android Devices</option>
+                <option value="samsung">Samsung One UI</option>
+                <option value="pixel">Google Pixel</option>
+                <option value="xiaomi">Xiaomi / Redmi (HyperOS &amp; MIUI)</option>
+                <option value="oneplus">OnePlus / Oppo (OxygenOS)</option>
+              </select>
+            </div>
+
+            <div class="status-summary-wrap">
+              <span id="activeProblemCount" class="status-summary-text">60 issues available</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 Category Filter Pills -->
+        <div class="cat-pill-container" id="categoryFilters" aria-label="Filter problems by category">
+          <button type="button" class="cat-pill-btn active" data-category-id="all">
+            <span class="cat-pill-icon">✨</span> All Issues <span class="cat-pill-count">60</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="battery-charging">
+            <span class="cat-pill-icon">⚡</span> Battery &amp; Charging <span class="cat-pill-count">8</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="wifi-network">
+            <span class="cat-pill-icon">📶</span> Wi-Fi &amp; Network <span class="cat-pill-count">8</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="storage-performance">
+            <span class="cat-pill-icon">🚀</span> Storage &amp; Speed <span class="cat-pill-count">6</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="apps-notifications">
+            <span class="cat-pill-icon">🔔</span> Apps &amp; Alerts <span class="cat-pill-count">6</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="bluetooth-audio">
+            <span class="cat-pill-icon">🎧</span> Bluetooth &amp; Audio <span class="cat-pill-count">5</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="display-touch">
+            <span class="cat-pill-icon">📱</span> Display &amp; Touch <span class="cat-pill-count">5</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="security-privacy">
+            <span class="cat-pill-icon">🛡️</span> Security &amp; Privacy <span class="cat-pill-count">4</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="system-updates">
+            <span class="cat-pill-icon">⚙️</span> System &amp; Updates <span class="cat-pill-count">4</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="camera-photos">
+            <span class="cat-pill-icon">📷</span> Camera &amp; Photos <span class="cat-pill-count">4</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="usb-sharing">
+            <span class="cat-pill-icon">💾</span> USB &amp; Sharing <span class="cat-pill-count">4</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="location-calls">
+            <span class="cat-pill-icon">📍</span> Location &amp; Calls <span class="cat-pill-count">3</span>
+          </button>
+          <button type="button" class="cat-pill-btn" data-category-id="everyday-features">
+            <span class="cat-pill-icon">⏰</span> Everyday Features <span class="cat-pill-count">3</span>
+          </button>
+        </div>
+
+        <!-- Problem Cards Grid (Hydrated by JS) -->
+        <div class="problem-cards-grid" id="problemGrid">
+          <!-- Populated by android-troubleshooting.js -->
+        </div>
+
+        <!-- No search results placeholder -->
+        <div id="noTroubleshootMatches" class="no-matches-card" hidden>
+          <h3>No matching problems found</h3>
+          <p>Try searching for a different symptom (e.g., "charging", "battery", "wifi", "sound") or reset category filters.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Safety Guidelines & Best Practices Section -->
+    <section class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Hardware Safety Protocol</div>
+            <h2>Device Safety &amp; Escalation Thresholds</h2>
+            <p class="section-intro">Understand when a problem can be solved with settings and when physical inspection is necessary.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <span class="tag">Battery Safety</span>
+            <h3>Swelling &amp; Heat Thresholds</h3>
+            <p>If the rear glass is pushing outward, the screen flexes, or the phone emits a chemical smell, STOP charging immediately. Never puncture swollen cells. Bring the device to a qualified service technician.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Data Protection</span>
+            <h3>Before Resetting or Servicing</h3>
+            <p>Never perform a factory data reset without confirming your photos, two-factor authenticator seeds, and contacts are synced to Google Drive or an external PC backup.</p>
+            <a class="read-link" href="/android-backup-reset.html">Read backup guide →</a>
+          </div>
+
+          <div class="card">
+            <span class="tag">Water Exposure</span>
+            <h3>Moisture in USB-C Port</h3>
+            <p>If your phone flags moisture in the charging port, do NOT plug in a cable. Stand the device upright in front of a fan. Charging with wet contacts triggers instant electrolytic corrosion on connector pins.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Deep-Dive Guides Cross-Reference Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">SMCyvera Original Articles</div>
+            <h2>In-Depth Android Technical Explainers</h2>
+            <p class="section-intro">Detailed, peer-reviewed explainers by Shahanur Mollah covering Android operating system internals.</p>
+          </div>
+          <a class="read-link" href="/guides.html">View all 28 library guides →</a>
+        </div>
+
+        <div class="grid">
+          <article class="card">
+            <span class="tag">Battery</span>
+            <h3><a href="/android-battery-health.html">Android Battery Health: What the Numbers Mean</a></h3>
+            <p>Understand cycle counts, design capacity vs actual capacity, and fuel gauge calibration methods.</p>
+            <a class="read-link" href="/android-battery-health.html">Read guide →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Battery</span>
+            <h3><a href="/phone-battery-drain.html">Why Your Phone Battery Drains Quickly</a></h3>
+            <p>Identify wakelocks, cellular power amplifiers hunting for weak signal, and background sync drain.</p>
+            <a class="read-link" href="/phone-battery-drain.html">Read guide →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Storage</span>
+            <h3><a href="/android-storage-full.html">Android Storage Full Even After Deleting Files</a></h3>
+            <p>Find hidden 30-day trash bins, app caches, and messaging database backups taking up phantom space.</p>
+            <a class="read-link" href="/android-storage-full.html">Read guide →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Performance</span>
+            <h3><a href="/android-make-phone-faster.html">How to Make an Android Phone Faster</a></h3>
+            <p>Tackle flash storage degradation, animation window scales, and unneeded background daemon killers.</p>
+            <a class="read-link" href="/android-make-phone-faster.html">Read guide →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Permissions</span>
+            <h3><a href="/android-permissions.html">Android App Permissions: What to Review and Why</a></h3>
+            <p>Control background location, camera access, and draw-over-other-apps privileges that fuel adware.</p>
+            <a class="read-link" href="/android-permissions.html">Read guide →</a>
+          </article>
+
+          <article class="card">
+            <span class="tag">Backup</span>
+            <h3><a href="/android-backup-reset.html">How to Back Up Android Before a Factory Reset</a></h3>
+            <p>Step-by-step checklist to avoid losing photos, SMS messages, Authenticator codes, and WhatsApp chats.</p>
+            <a class="read-link" href="/android-backup-reset.html">Read guide →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Author Profile Section -->
+    <section class="section alt">
+      <div class="container">
+        <div class="creator-spotlight">
+          <img src="/author.jpg" alt="Shahanur Mollah — Founder &amp; Author of SMCyvera" class="creator-avatar" width="100" height="100">
+          <div class="creator-text">
+            <div class="eyebrow">Created by Shahanur Mollah</div>
+            <h2>Practical engineering diagnosis for real Android devices</h2>
+            <p>The Android Troubleshooting Center was designed by <strong>Shahanur Mollah</strong> to eliminate vague internet advice and replace it with structured diagnostic trees. Every solution emphasizes non-destructive checks first, verifies hardware limits, and highlights genuine differences between Samsung One UI, Google Pixel, and Xiaomi HyperOS.</p>
+            <a class="read-link" href="/about.html">About Shahanur Mollah &amp; SMCyvera Editorial Philosophy →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Interactive Diagnosis Modal Overlay -->
+  <div id="diagnosisModal" class="diag-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="diag-modal-container">
+      <button type="button" id="modalCloseBtn" class="modal-close-button" aria-label="Close diagnostic">✕</button>
+      <div id="diagnosisBody" class="diag-modal-body">
+        <!-- Rendered dynamically by android-troubleshooting.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Fix History Drawer -->
+  <aside id="historyDrawer" class="history-drawer" aria-hidden="true" aria-label="Diagnostic Fix History">
+    <div class="history-drawer-header">
+      <div class="history-drawer-title-group">
+        <h3>Your Fix History</h3>
+        <p class="history-drawer-sub">Stored locally in your browser. No accounts or telemetry.</p>
+      </div>
+      <button type="button" id="closeHistoryBtn" class="drawer-close-btn" aria-label="Close history">✕</button>
+    </div>
+
+    <div class="history-drawer-toolbar">
+      <button type="button" id="exportHistoryJsonBtn" class="btn-sm btn-subtle">Export JSON</button>
+      <button type="button" id="exportHistoryTextBtn" class="btn-sm btn-subtle">Export Text Report</button>
+      <button type="button" id="clearAllHistoryBtn" class="btn-sm btn-danger-outline">Clear All</button>
+    </div>
+
+    <div id="historyList" class="history-drawer-list">
+      <!-- Populated dynamically -->
+    </div>
+  </aside>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-author-box">
+          <img src="/author.jpg" alt="Shahanur Mollah" class="footer-author-avatar" width="52" height="52">
+          <div>
+            <div class="footer-brand">
+              <span class="logo-mark">SM</span>
+              <div class="logo-text-group">
+                <span class="logo-brand">Cyvera</span>
+                <span class="logo-author">by Shahanur Mollah</span>
+              </div>
+            </div>
+            <p class="footer-note">Practical, unbiased technology explainers and browser tools created by Shahanur Mollah to help you understand tech problems before buying hardware or altering device settings.</p>
+          </div>
+        </div>
+        <div>
+          <div class="footer-links">
+            <a href="/about.html">About</a>
+            <a href="/guides.html">Guides</a>
+            <a href="/android-troubleshooting.html">Android Center</a>
+            <a href="/tools.html">Tools</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms.html">Terms</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SMCyvera by Shahanur Mollah. All rights reserved. Educational information; verify device-specific instructions and manufacturer specifications.</p>
+        <a href="/SMCyvera-updated.zip" class="download-package-link" download>Download Complete Vercel Package (.zip)</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="/android-troubleshooting-data.js"></script>
+  <script type="module" src="/android-troubleshooting.js"></script>
+  <script type="module" src="/script.js"></script>
+</body>
+</html>
