@@ -563,9 +563,9 @@
         <div class="resolution-card">
           <h4>Recommended Maintenance & Prevention:</h4>
           <ul>
-            <li>Restart your phone at least once every 1–2 weeks to clear lingering kernel cache and memory leaks.</li>
-            <li>Maintain at least 15% free internal storage to avoid flash memory controller wear and performance degradation.</li>
-            <li>Keep Android System WebView and Google Play Services updated regularly.</li>
+            <li>Restarting your phone periodically helps terminate misbehaving background processes and clears temporary application memory.</li>
+            <li>Maintain at least 15% free internal storage to avoid flash memory write bottlenecks and general system slowdowns.</li>
+            <li>Keep Android System WebView and Google Play Services updated regularly through the Google Play Store.</li>
           </ul>
         </div>
 
@@ -596,7 +596,7 @@
         <div class="escalation-icon">🛠️</div>
         <h2 class="escalation-heading">Hardware & Authorized Service Escalation</h2>
         <p class="escalation-sub">
-          When software switches, cache resets, and Safe Mode tests fail to resolve <strong>${escapeHtml(problem.title)}</strong>, physical hardware component failure is the primary probability.
+          When software settings, safe mode checks, and configuration steps fail to resolve <strong>${escapeHtml(problem.title)}</strong>, physical component inspection, carrier network verification, or authorized technician service may be necessary to identify if hardware or component wear is involved.
         </p>
 
         <div class="escalation-steps-grid">

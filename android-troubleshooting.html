@@ -134,7 +134,7 @@
           <nav aria-label="Breadcrumb" class="breadcrumbs" style="margin-bottom: 12px; font-size: 13.5px;"><a href="/index.html">Home</a> / <a href="/guides.html">Guides</a> / <span aria-current="page">Android Troubleshooting</span></nav>
           <div class="eyebrow">SMCyvera Interactive Diagnostics · Android 10 – 15+</div>
           <h1>Android Troubleshooting Center</h1>
-          <p>A comprehensive, interactive diagnostic engine for 60 common Android problems across battery, Wi-Fi, storage, apps, audio, and hardware. Guided tests, OEM-specific settings for Samsung, Pixel, and Xiaomi, and local fix history.</p>
+          <p>An interactive, step-by-step troubleshooting guide for 60 common Android problems across battery, Wi-Fi, storage, apps, audio, and hardware. Follow guided diagnostic trees, manufacturer-specific settings for Samsung, Pixel, and Xiaomi, and track your progress in your browser.</p>
           
           <div class="hero-actions">
             <a class="btn" href="#diagnostic-hub">Find Your Problem Below</a>
@@ -148,7 +148,7 @@
           <h2>How Diagnosis Works</h2>
           <p>Every problem is diagnosed with clear engineering reasoning rather than random trial-and-error:</p>
           <div class="hero-points">
-            <div class="hero-point"><b>01</b><span><b>Targeted check</b> — pinpoint whether the root cause is software, setting, or hardware.</span></div>
+            <div class="hero-point"><b>01</b><span><b>Guided evaluation</b> — helps you determine whether symptoms point toward software settings, app behavior, or potential hardware issues.</span></div>
             <div class="hero-point"><b>02</b><span><b>OEM variations</b> — specific navigation paths for Samsung One UI, Pixel, and Xiaomi.</span></div>
             <div class="hero-point"><b>03</b><span><b>Fix History</b> — automatically saves your steps and outcomes in browser storage.</span></div>
           </div>
@@ -162,7 +162,7 @@
         <div class="sandbox-disclaimer-card">
           <div class="disclaimer-badge">🔒 100% Private &amp; Browser-Based</div>
           <div class="disclaimer-content">
-            <p><strong>Sandbox Notice:</strong> This diagnostic tool runs purely on client-side logic in your browser. It does not scan, modify, or read your phone's private files, logs, or personal photos. Every test is a step-by-step walkthrough for you to safely test on your device.</p>
+            <p><strong>Browser-Based Guided Tool Notice:</strong> This troubleshooting center is an educational guided manual that runs entirely in your browser. It does not and cannot scan your phone's internal hardware, read system logs, inspect device files, or evaluate battery health automatically. Every test is a step-by-step manual check for you to safely perform on your device.</p>
           </div>
         </div>
       </div>
@@ -290,28 +290,40 @@
           <div>
             <div class="eyebrow">Hardware Safety Protocol</div>
             <h2>Device Safety &amp; Escalation Thresholds</h2>
-            <p class="section-intro">Understand when a problem can be solved with settings and when physical inspection is necessary.</p>
+            <p class="section-intro">Understand when an Android problem can be solved through software settings and when physical inspection is necessary.</p>
           </div>
         </div>
 
         <div class="grid">
           <div class="card">
             <span class="tag">Battery Safety</span>
-            <h3>Swelling &amp; Heat Thresholds</h3>
-            <p>If the rear glass is pushing outward, the screen flexes, or the phone emits a chemical smell, STOP charging immediately. Never puncture swollen cells. Bring the device to a qualified service technician.</p>
+            <h3>Swollen Batteries &amp; Chemical Odors</h3>
+            <p>If the rear glass is pushing outward, the screen bows, or the phone emits a sweet or pungent chemical smell, <strong>STOP charging immediately</strong>. Disconnect power at the wall outlet, power off if safe, and never compress or puncture the battery. Place on a non-flammable surface away from combustibles and take to an authorized technician or recycling center.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Port &amp; Cable Safety</span>
+            <h3>Burning Smells &amp; Damaged Ports</h3>
+            <p>If you smell burning plastic, observe smoke, or see scorch marks near the USB-C port, cut power from the wall outlet immediately. <strong>Never insert metal needles, pins, or paperclips</strong> into charging ports—conductive metal shorts power pins (VBUS/GND), causing sparks and destroying controller ICs. Use only non-conductive wooden/plastic picks gently, or dry compressed air.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Liquid Exposure</span>
+            <h3>Moisture Alerts &amp; Water Ingress</h3>
+            <p>If your phone flags moisture in the charging port, do NOT connect a charging cable. Electrical current through wet contacts causes immediate electrolytic corrosion on connector pins. Stand the phone upright in front of a gentle room-temperature fan. Never use hair dryers, heat guns, ovens, or uncooked rice.</p>
+          </div>
+
+          <div class="card">
+            <span class="tag">Thermal Limits</span>
+            <h3>Operating Temperatures &amp; Sensor Locations</h3>
+            <p>Major manufacturers (Samsung, Google Pixel, Xiaomi) specify normal operating ambient ranges between 0°C and 35°C (32°F to 95°F). Direct sunlight and warm car dashboards trap heat. Internal CPU junctions naturally reach higher temperatures under load, while battery thermistors trigger safety throttling if warm. Warm metal frames reflect normal heat dissipation.</p>
           </div>
 
           <div class="card">
             <span class="tag">Data Protection</span>
-            <h3>Before Resetting or Servicing</h3>
-            <p>Never perform a factory data reset without confirming your photos, two-factor authenticator seeds, and contacts are synced to Google Drive or an external PC backup.</p>
+            <h3>Factory &amp; Network Reset Warnings</h3>
+            <p>Never perform a factory data reset without confirming your photos, messages, authenticator seeds, and contacts are synced to Google Drive or a PC. Network resets erase saved Wi-Fi passwords and paired Bluetooth accessories. Always ensure you know your Google account credentials to pass Factory Reset Protection (FRP).</p>
             <a class="read-link" href="/android-backup-reset.html">Read backup guide →</a>
-          </div>
-
-          <div class="card">
-            <span class="tag">Water Exposure</span>
-            <h3>Moisture in USB-C Port</h3>
-            <p>If your phone flags moisture in the charging port, do NOT plug in a cable. Stand the device upright in front of a fan. Charging with wet contacts triggers instant electrolytic corrosion on connector pins.</p>
           </div>
         </div>
       </div>
@@ -354,7 +366,7 @@
           <article class="card">
             <span class="tag">Performance</span>
             <h3><a href="/android-make-phone-faster.html">How to Make an Android Phone Faster</a></h3>
-            <p>Tackle flash storage degradation, animation window scales, and unneeded background daemon killers.</p>
+            <p>Tackle storage bottlenecks, animation window scales, and understand how modern Android manages background apps.</p>
             <a class="read-link" href="/android-make-phone-faster.html">Read guide →</a>
           </article>
 
