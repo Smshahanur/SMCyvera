@@ -145,7 +145,131 @@
     }
   }
 
-  // 3. Calculators for tools.html
+  // 3. Homepage Live Search (indexes all 28 guides and 7 digital tools)
+  function initHeroSearch() {
+    const input = document.getElementById('heroSearchInput');
+    const resultsContainer = document.getElementById('heroSearchResults');
+    if (!input || !resultsContainer) return;
+
+    const searchableItems = [
+      // 28 Guides
+      { title: 'How to Calculate Solar Battery Backup Time', cat: 'Solar & Power', type: 'Guide', url: '/solar-battery-backup.html', keywords: 'solar battery backup runtime watt hour inverter load discharge calculation' },
+      { title: 'Why Wi-Fi Is Slow and How to Troubleshoot It', cat: 'Internet', type: 'Guide', url: '/wifi-slow.html', keywords: 'wifi internet slow speed connection latency ping 5ghz 2.4ghz router' },
+      { title: 'How to Make an Android Phone Faster', cat: 'Android', type: 'Guide', url: '/android-make-phone-faster.html', keywords: 'android phone speed lag stutter ram animations cache apps' },
+      { title: 'Windows PC Running Slow: Step-by-Step Diagnosis', cat: 'PC', type: 'Guide', url: '/windows-slow.html', keywords: 'windows pc computer slow startup task manager disk 100 ssd cpu' },
+      { title: 'USB-C Charging Explained: Power, Cables and Chargers', cat: 'Electronics', type: 'Guide', url: '/usb-c-charging.html', keywords: 'usb-c pd power delivery fast charging watts cable thunderbolt amps' },
+      { title: 'How to Calculate the Right Inverter Size', cat: 'Solar & Power', type: 'Guide', url: '/inverter-size.html', keywords: 'inverter size wattage surge pure sine wave solar load capacity' },
+      { title: 'How to Back Up Android Before a Factory Reset', cat: 'Android', type: 'Guide', url: '/android-backup-reset.html', keywords: 'android backup factory reset photos contacts google drive data restore' },
+      { title: 'Wi-Fi Connected but No Internet: What to Check', cat: 'Internet', type: 'Guide', url: '/wifi-no-internet.html', keywords: 'wifi connected no internet dns gateway ip address router modem' },
+      { title: 'Battery Ah vs Wh Explained', cat: 'Solar & Power', type: 'Guide', url: '/battery-ah-wh.html', keywords: 'battery ah amp-hour wh watt-hour formula calculation nominal voltage' },
+      { title: 'How to Check Laptop Battery Health', cat: 'PC', type: 'Guide', url: '/laptop-battery-health.html', keywords: 'laptop battery health windows powercfg cycle count wear capacity' },
+      { title: 'Android Storage Full: How to Free Up Space Safely', cat: 'Android', type: 'Guide', url: '/android-storage-full.html', keywords: 'android storage full clear cache delete duplicate media files' },
+      { title: 'Improve Home Wi-Fi Coverage & Eliminate Dead Zones', cat: 'Internet', type: 'Guide', url: '/wifi-coverage.html', keywords: 'wifi coverage dead zone access point mesh extender range 5ghz' },
+      { title: 'MPPT vs PWM Solar Charge Controllers Explained', cat: 'Solar & Power', type: 'Guide', url: '/mppt-vs-pwm.html', keywords: 'mppt pwm solar charge controller efficiency solar panels voltage' },
+      { title: 'SSD vs HDD: Why Upgrading Your Hard Drive Matters', cat: 'PC', type: 'Guide', url: '/ssd-vs-hdd.html', keywords: 'ssd hdd hard drive solid state nvme sata boot speed benchmark' },
+      { title: 'How to Clean a Dusty PC Safely', cat: 'PC', type: 'Guide', url: '/clean-pc-dust.html', keywords: 'clean pc dust compressed air fans cpu thermal paste overheating' },
+      { title: 'How to Fix Android Apps Crashing Repeatedly', cat: 'Android', type: 'Guide', url: '/android-app-crashing.html', keywords: 'android app crash force close webview clear data cache permissions' },
+      { title: 'Android Battery Drain: Find the Culprit App', cat: 'Android', type: 'Guide', url: '/android-battery-drain.html', keywords: 'android battery drain battery usage background apps screen time' },
+      { title: 'How to Test Internet Speed Accurately', cat: 'Internet', type: 'Guide', url: '/test-internet-speed.html', keywords: 'test internet speed bandwidth jitter ping fast ookla download' },
+      { title: 'Router Placement Guide for Best Wi-Fi Signal', cat: 'Internet', type: 'Guide', url: '/router-placement.html', keywords: 'router placement position signal obstruction height walls interference' },
+      { title: 'Phone Overheating: Safe Temperature & Cooling Tips', cat: 'Android', type: 'Guide', url: '/phone-overheating.html', keywords: 'phone overheating temperature hot battery gaming charging cpu safe limits' },
+      { title: 'PC RAM Explained: How Much Memory Do You Really Need?', cat: 'PC', type: 'Guide', url: '/pc-ram-guide.html', keywords: 'pc ram memory 8gb 16gb 32gb ddr4 ddr5 multitasking' },
+      { title: 'Lead-Acid vs Lithium Batteries for Solar Inverters', cat: 'Solar & Power', type: 'Guide', url: '/lead-acid-vs-lithium.html', keywords: 'lead acid lithium lifepo4 cycle life dod depth of discharge solar' },
+      { title: 'Safe Charging Habits: Prolong Smartphone Battery Life', cat: 'Electronics', type: 'Guide', url: '/safe-charging-habits.html', keywords: 'safe charging smartphone 80 percent battery degradation heat cycles' },
+      { title: 'Power Bank Buying Guide: Capacity, Watts & Ports', cat: 'Electronics', type: 'Guide', url: '/power-bank-guide.html', keywords: 'power bank mah capacity fast charge pd airline allowed watts' },
+      { title: 'How to Choose the Right Ethernet Cable: Cat 5e, 6, 6a', cat: 'Internet', type: 'Guide', url: '/ethernet-cable-guide.html', keywords: 'ethernet cable cat5e cat6 cat6a rj45 lan gigabit bandwidth speed' },
+      { title: 'Fix Windows Blue Screen (BSOD) Basic Troubleshooting', cat: 'PC', type: 'Guide', url: '/windows-bsod-basics.html', keywords: 'windows bsod blue screen crash dump minidump driver stop error' },
+      { title: 'Solar Panel Angle and Tilt Calculation Guide', cat: 'Solar & Power', type: 'Guide', url: '/solar-panel-angle.html', keywords: 'solar panel angle tilt latitude seasonal orientation south' },
+      { title: 'Surge Protectors vs Extension Cords: Safety Guide', cat: 'Electronics', type: 'Guide', url: '/surge-protector-safety.html', keywords: 'surge protector extension cord power strip joules clamping voltage' },
+      // 7 Tools
+      { title: 'Battery Runtime Calculator', cat: 'Solar & Power', type: 'Tool', url: '/tools.html#battery-runtime', keywords: 'battery runtime calculator inverter hours backup estimator ah volts watts' },
+      { title: 'Solar Panel Daily Energy Estimator', cat: 'Solar & Power', type: 'Tool', url: '/tools.html#solar-energy', keywords: 'solar energy daily output calculator watt hours peak sun hours generation' },
+      { title: 'Inverter Continuous Load Calculator', cat: 'Solar & Power', type: 'Tool', url: '/tools.html#inverter-load', keywords: 'inverter load sizing calculator wattage safety margin rating appliance' },
+      { title: 'Android Troubleshooting Center (60 Problems)', cat: 'Android', type: 'Interactive Tool', url: '/android-troubleshooting.html', keywords: 'android troubleshooting diagnostic interactive tool fix battery wifi screen bluetooth' },
+      { title: 'Amp-Hours to Watt-Hours Converter', cat: 'Electronics', type: 'Tool', url: '/tools.html#ah-wh', keywords: 'amp hour to watt hour converter ah wh formula battery capacity' },
+      { title: 'Wi-Fi Bandwidth & Transfer Time Calculator', cat: 'Internet', type: 'Tool', url: '/tools.html#wifi-calc', keywords: 'wifi bandwidth transfer download time calculator file size speed mbps' },
+      { title: 'Power Consumption & Electricity Cost Calculator', cat: 'Electronics', type: 'Tool', url: '/tools.html#power-cost', keywords: 'power consumption electricity cost kwh running cost appliance monthly' }
+    ];
+
+    function renderResults(query) {
+      const q = query.trim().toLowerCase();
+      if (q.length < 2) {
+        resultsContainer.innerHTML = '';
+        resultsContainer.classList.remove('active');
+        return;
+      }
+
+      const matches = searchableItems.filter(item => {
+        return item.title.toLowerCase().includes(q) ||
+               item.cat.toLowerCase().includes(q) ||
+               item.keywords.toLowerCase().includes(q);
+      }).slice(0, 6);
+
+      if (matches.length === 0) {
+        resultsContainer.innerHTML = `
+          <div class="hero-search-no-match">
+            <p>No guides or tools found matching "<strong>${escapeHtml(query)}</strong>"</p>
+            <a href="/guides.html?search=${encodeURIComponent(query)}" class="hero-search-fallback-link">Search full 28-guide library →</a>
+          </div>
+        `;
+        resultsContainer.classList.add('active');
+        return;
+      }
+
+      const itemsHtml = matches.map(item => `
+        <a href="${item.url}" class="hero-search-item">
+          <span class="hero-search-badge ${item.type === 'Tool' || item.type === 'Interactive Tool' ? 'badge-tool' : 'badge-guide'}">${item.type}</span>
+          <div class="hero-search-info">
+            <span class="hero-search-title">${escapeHtml(item.title)}</span>
+            <span class="hero-search-category">${escapeHtml(item.cat)}</span>
+          </div>
+          <span class="hero-search-arrow" aria-hidden="true">→</span>
+        </a>
+      `).join('');
+
+      resultsContainer.innerHTML = `
+        <div class="hero-search-list">${itemsHtml}</div>
+        <div class="hero-search-footer">
+          <a href="/guides.html?search=${encodeURIComponent(query)}">Explore all results for "${escapeHtml(query)}" in Library →</a>
+        </div>
+      `;
+      resultsContainer.classList.add('active');
+    }
+
+    function escapeHtml(str) {
+      return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    input.addEventListener('input', function () {
+      renderResults(input.value);
+    });
+
+    input.addEventListener('focus', function () {
+      if (input.value.trim().length >= 2) {
+        renderResults(input.value);
+      }
+    });
+
+    input.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        const q = input.value.trim();
+        if (q) {
+          window.location.href = `/guides.html?search=${encodeURIComponent(q)}`;
+        }
+      } else if (e.key === 'Escape') {
+        resultsContainer.classList.remove('active');
+      }
+    });
+
+    document.addEventListener('click', function (e) {
+      if (!input.contains(e.target) && !resultsContainer.contains(e.target)) {
+        resultsContainer.classList.remove('active');
+      }
+    });
+  }
+
+  // 4. Calculators for tools.html
   function initTools() {
     // Utility helper
     function getVal(id) {
@@ -310,11 +434,13 @@
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', function () {
       initNavigation();
+      initHeroSearch();
       initGuidesFilter();
       initTools();
     });
   } else {
     initNavigation();
+    initHeroSearch();
     initGuidesFilter();
     initTools();
   }
