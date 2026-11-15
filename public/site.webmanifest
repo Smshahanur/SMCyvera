@@ -1,0 +1,21 @@
+{
+  "name": "SMCyvera",
+  "short_name": "SMCyvera",
+  "description": "Practical technology guides, troubleshooting explainers, and free online tools created by Shahanur Mollah.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#061525",
+  "theme_color": "#0284c7",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
